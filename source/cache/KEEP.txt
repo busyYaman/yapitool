@@ -1,0 +1,2 @@
+Please keep this file to make sure cache folder exists.
+
