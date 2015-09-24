@@ -657,7 +657,7 @@ class _Interpreter
             		    $v = $image_name;
                         }
 
-			$v = $this->get_image_path($v);
+			$v = $this->get_image_path("./photo/" . $image_name);
 			if(!$v)
 			{
 				$item->append_error('無法找到圖檔 (CSV 欄: '.(1+$i).', 給定圖檔名稱: '.$orig_filename.')');
