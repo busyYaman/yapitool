@@ -650,6 +650,13 @@ class _Interpreter
 			if(0 == strlen($v))
 			{ continue; }
 			$orig_filename = $v;
+
+            	        if (strpos($v,"http") === 0) {
+            		    $image_name = basename($v);
+            		    file_put_contents("./photo/" . $image_name, file_get_contents($v));
+            		    $v = $image_name;
+                        }
+
 			$v = $this->get_image_path($v);
 			if(!$v)
 			{
